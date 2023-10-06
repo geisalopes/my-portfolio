@@ -12,7 +12,7 @@
 }
 
 body {
-  margin-top: 100px;
+  margin: 100px 0;
 }
 
 a {
@@ -23,7 +23,6 @@ h1,
 h2,
 h3 {
   font-family: var(--poppins-font);
-  text-align: center;
   margin: 0;
 }
 
@@ -32,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 44px;
 }
 
 h3 {
@@ -61,13 +60,12 @@ p {
   text-transform: capitalize;
 }
 
-.information-button.left {
+.information-button.right {
   display: flex;
-  margin-top: 20px;
   justify-content: left;
 }
 
-.information-button.left a {
+.information-button.right a {
   margin: 0;
   border-radius: 4px;
   padding: 15px 10px;
@@ -75,13 +73,12 @@ p {
   text-transform: capitalize;
 }
 
-.information-button.right {
+.information-button.left {
   display: flex;
-  margin-top: 20px;
   justify-content: right;
 }
 
-.information-button.right a {
+.information-button.left a {
   margin: 0;
   border-radius: 4px;
   padding: 15px 10px;
@@ -137,7 +134,7 @@ p {
 }
 
 .container {
-  margin: 30px auto;
+  width: 100%;
 }
 
 .shadow-sm {
@@ -154,7 +151,8 @@ p {
   text-align: left;
   font-size: var(--app-text-description);
   padding: 10px 0 0;
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .app-title-left {
@@ -170,12 +168,11 @@ p {
   margin: 0 auto;
 }
 
-.row {
+/* .row {
   margin: 50px 0;
-}
+} */
 
 .navbar-brand {
-  margin-left: 30px;
   font-family: var(--secondary-font);
   padding: 5px 0;
 }
@@ -184,4 +181,63 @@ p {
   padding-top: 10px;
   color: grey;
   font-family: var(--secondary-font);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .app-title-right {
+    font-size: 30px;
+    text-align: center;
+  }
+  .app-description-right {
+    font-size: 18px;
+    text-align: center;
+  }
+  .app-title-left {
+    font-size: 30px;
+    text-align: center;
+  }
+  .app-description-left {
+    font-size: 18px;
+    text-align: center;
+  }
+  .information-button.right {
+    display: block;
+    text-align: center;
+  }
+  .information-button.left {
+    display: block;
+    text-align: center;
+  }
+
+  .smartphone-button {
+    display: block;
+    text-align: center;
+    margin: 0 20px !important;
+    padding: 20px 15px !important;
+  }
+  .navbar-brand {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .col-sm-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 }
